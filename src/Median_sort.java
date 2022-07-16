@@ -23,7 +23,7 @@ public class Median_sort {
 			
 		}
 		
-		int x = arr[n-1] + arr2[0];
+		int x = (arr[n-1] + arr2[0])/2;
 		System.out.println(x);
 	}
 
