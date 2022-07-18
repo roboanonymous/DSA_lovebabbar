@@ -5,11 +5,17 @@ public class permutation {
 	{
 		int first = n-2, last = n-1;
 		int count = 0;
-		while (arr[first] > arr[last] || first > 0 )
+		
+		while (arr[first] > arr[last] && first > 0 )
 		{
 			count++;
 			first --;
 			last --;
+			
+		}
+		
+		for(int i=0; i<count; i++)
+		{
 			
 		}
 		
