@@ -3,21 +3,35 @@ public class permutation {
 	
 	public static void permutation1 (int n, int[] arr)
 	{
-		int first = n-2, last = n-1;
+		int pointer = n-1;
 		int count = 0;
+		int small = Integer.MAX_VALUE ,x = 0;
 		
-		while (arr[first] > arr[last] && first > 0 )
+		while (arr[pointer-1] > arr[pointer] && pointer > 1 )
 		{
 			count++;
-			first --;
-			last --;
+			pointer--;
 			
 		}
+		
 		
 		for(int i=0; i<count; i++)
 		{
-			
+			if (arr[n-1-i] < small)
+			{
+				small = arr[n-i-1];
+				x = n-i-1;
+			}
 		}
+		
+		int temp = arr[x];
+		arr[x] = arr[n-1-count];
+		arr[n-1-count] = temp;
+		
+		Arrays.sort(arr, n-count, n-1 ); 
+	
+		
+		
 		
 		System.out.println (count);
 		
@@ -37,6 +51,12 @@ public class permutation {
 		}
 		
 		permutation1(n,arr);
+		
+		for(int j=0; j<n; j++)
+		{
+			System.out.println(arr[j]);
+		}
+		
 
 	}
 
