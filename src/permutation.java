@@ -3,11 +3,11 @@ public class permutation {
 	
 	public static void permutation1 (int n, int[] arr)
 	{
-		int pointer = n-1;
+		int pointer = n-2;
 		int count = 0;
 		int small = Integer.MAX_VALUE ,x = 0;
 		
-		while (arr[pointer-1] > arr[pointer] && pointer > 1 )
+		while (arr[pointer-1] > arr[pointer] && pointer >= 0 )
 		{
 			count++;
 			pointer--;
