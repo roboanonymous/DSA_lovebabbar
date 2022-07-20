@@ -4,19 +4,23 @@ public class max_product {
 	
 	public static void maximum(int n, int[] arr)
 	{
-		int curr = 1, max= 0;
+		int max= 1;
+		int min = Integer.MAX_VALUE;
 		for(int i=0; i<n; i++)
 		{
-			curr = curr* arr[i];
-			if(max < curr)
+			if(arr[i] != 0)
 			{
-				max = curr;
+				max = max*arr[i];
 			}
-			
-			if (curr == 0)
+			if(min > arr[i])
 			{
-				curr = 1;
+				min = arr[i];
 			}
+		}
+		
+		if(max < 0)
+		{
+			max = max/ min;
 		}
 		
 		System.out.println(max);
