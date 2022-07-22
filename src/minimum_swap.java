@@ -14,8 +14,7 @@ public class minimum_swap {
 				count++;
 			}
 		}
-		
-		System.out.println(count);
+	
 		
 		for(int i=0; i<= n-count; i++)
 		{
@@ -28,7 +27,6 @@ public class minimum_swap {
 				}
 			}
 			
-			System.out.println(bad);
 			
 			res = Math.min(res, count-bad);
 		}

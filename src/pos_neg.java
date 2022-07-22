@@ -19,7 +19,7 @@ public class pos_neg {
 			
 		}
 		
-		for
+
 	}
 
 	public static void main(String[] args) {
