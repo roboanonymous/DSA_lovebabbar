@@ -11,12 +11,12 @@ public class Matrix_binary {
 				System.out.print("Row is " + i + " and column is " + j);
 			}
 			
-			else if(k > matrix[i][j])
+			if(k > matrix[i][j])
 			{
 				i++;
 			}
 			
-			else if (k < matrix[i][j] )
+			else
 			{
 				j--;
 			}
